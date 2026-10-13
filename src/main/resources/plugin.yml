@@ -1,0 +1,41 @@
+name: server-talk
+version: '${version}'
+main: ir.gharri.servertalk.ServerTalk
+api-version: '1.21.11'
+
+commands:
+  clearchat:
+    description: Clear the chat for everyone
+    aliases: [cc]
+    usage: /clearchat
+  clearmassagechat:
+    description: Clear only your own chat
+    aliases: [cmc]
+    usage: /clearmassagechat
+  text3d:
+    description: Create floating 3D text in front of you
+    usage: /text3d [size] <text with | for new line>
+  edittext3d:
+    description: Edit a 3D text by ID or nearest
+    aliases: [et3d]
+    usage: /edittext3d [id <id>] <action>
+  deletetext3d:
+    description: Delete a 3D text by ID, nearest, or all
+    aliases: [dt3d]
+    usage: /deletetext3d <id|nearest|all>
+  servertalk:
+    description: ServerTalk admin commands
+    aliases: [st]
+    usage: /st <storage|reload|list>
+
+permissions:
+  servertalk.clearchat:
+    default: op
+  servertalk.text3d:
+    default: op
+  servertalk.edittext3d:
+    default: op
+  servertalk.deletetext3d:
+    default: op
+  servertalk.admin:
+    default: op

@@ -1,0 +1,24 @@
+# ============================================
+#   ServerTalk 3D Text Storage Configuration
+# ============================================
+
+# Storage mode: NONE | JSON | MYSQL
+# NONE  → nothing is saved, all texts vanish on restart
+# JSON  → texts are saved in 3dtexts.json inside plugin folder
+# MYSQL → texts are saved in a MySQL database
+StorageMode: JSON
+
+Json:
+  FileName: 3dtexts.json
+
+MySQL:
+  Host: localhost
+  Port: 3306
+  Database: servertalk
+  Username: root
+  Password: ""
+  Table: 3d_texts
+  UseSSL: false
+  PoolSize: 4
+
+# Create By BenyVK(Gharri.ir)
